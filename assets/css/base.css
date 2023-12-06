@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif;
+}
+
+.clear {
+    clear: both;
+}
+
+.overlay {
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+  }
+
+
+#tablet-menu {
+    padding-top: 120px;
+    width: 400px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #ec391f;
+    transform: translateX(-100%);
+    transition: all 0.3s;
+}
+
+
+#tablet-nav li {
+    list-style-type: none;
+    border-top: solid white 0.5px;
+    border-bottom: solid white 0.5px;
+    margin-right: 30px;
+}
+
+#tablet-nav li  a,
+#tablet-nav li  label {
+    line-height: 40px;
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#tablet-nav li:hover label {
+    cursor: pointer;
+}
+
+#tablet-nav .tablet-sub-nav{
+   display: none;
+}
+
+#tablet-menu .close-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    line-height: 50px;
+}
+
+#tablet-menu .close-menu:hover,
+#header .open-tablet-list:hover {
+    cursor: pointer;
+}
+
+#tablet-menu .tablet-logo {
+    height: 80px;
+    width: 80px;
+    margin-left: 20px;
+}
+
+.sub-menu-btn {
+  display: none;
+}
+
+.sub-menu-btn:checked ~ .tablet-sub-nav {
+    display: block !important;
+}
+
+#header .open-tablet-list {
+    position: absolute;
+    float: left;
+    top: 0;
+    left: 20px;
+    line-height: 100px;
+    display: none;
+}
+
+.tablet-menu-btn {
+    display: none;
+}
+
+.tablet-menu-btn:checked ~ .overlay {
+    display: block;
+}
+
+.tablet-menu-btn:checked ~ #tablet-menu {
+    transform: translateX(0);
+}
+
+#tablet-menu .mobile-list,
+#tablet-menu .account-mobile-btn,
+#tablet-menu  .account-mobile-list  {
+    display: none;
+}
+
+.account-mobile-btn:checked ~ .account-mobile-list {
+    display: block !important;
+}
+
+
+/* mobile========================================*/
+
+@media only screen and (max-width: 46.8175em) {
+    #nav, #header .logo {
+        display: none;
+     }
+
+     #header .open-tablet-list,
+     #tablet-menu .mobile-list {
+        display: block;
+     }
+
+     #slide .item:nth-child(3), .item:nth-child(4), .item:nth-child(5), .item:nth-child(n+6){
+        opacity: 0;
+     }
+    
+     .group {
+        display: none;
+     }
+}
+
+/* tablet=========================================== */
+
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+     #nav {
+        display: none;
+     }
+    
+     #header .logo {
+        display: none;
+     }
+
+     #header .open-tablet-list {
+        display: block;
+     }
+
+}
