@@ -20,10 +20,12 @@ html {
     top: 0;
     background-color: rgba(0,0,0,0.5);
     display: none;
+    z-index: +1;
   }
 
 
 #tablet-menu {
+    z-index: +1;
     padding-top: 120px;
     width: 300px;
     position: fixed;
@@ -148,6 +150,7 @@ html {
         position: absolute;
         display: block;
         right: 0;
+        z-index: -1;
      }
 
      .item .name{
@@ -166,6 +169,15 @@ html {
 
     .item button{
         padding:5px 10px !important;
+    }
+
+    #root .root-container {
+        width: 100%;
+        min-height: 500px;
+    } 
+
+    #root .root-body input {
+        width: 100% !important;
     }
        
 }
@@ -186,3 +198,7 @@ html {
      }
 
 }
+
+/* ============================================================================================================================= */
+
+
