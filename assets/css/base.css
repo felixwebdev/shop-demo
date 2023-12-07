@@ -123,6 +123,9 @@ html {
 /* mobile========================================*/
 
 @media only screen and (max-width: 46.8175em) {
+    html {
+        width: 100%;
+    }
     #nav, #header .logo {
         display: none;
      }
